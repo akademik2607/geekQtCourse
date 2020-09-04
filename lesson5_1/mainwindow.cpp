@@ -11,10 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 //    connect(ui->engButton, &QRadioButton::toggled, this, &MainWindow::changeOfLang); //Соединил с 1 кнопкой, чтобы не дублировать вызовы слота
     connect(this, SIGNAL(updateSignal()), this, SLOT(update()));
 
-    //Светлый стиль
-    setStyleSheet("QMainWindow{background-color: #131313;}"
-                  "QPlainTextEdit{background-color: black; color: white;}"
-                  "QRadioButton{color: green}");
+
 
     themColors.insert(QString("Dark"), QString("QMainWindow{background-color: #131313;}"
                                "QPlainTextEdit{background-color: black; color: white;}"
