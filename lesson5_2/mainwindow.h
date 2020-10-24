@@ -2,12 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QFileSystemModel>
-#include <QTreeView>
-#include <QDir>
-#include <QWidget>
-#include <QLineEdit>
-#include <QPushButton>
+#include <filesysbrouser.h>
+
 
 
 class MainWindow : public QMainWindow
@@ -17,14 +13,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
-public slots:
-    void changeCurrentDir();
-private:
-    QTreeView* tree;
-    QFileSystemModel* model;
-    QWidget* widget;
-    QLineEdit* line;
-    QPushButton * findB;
+    FileSysBrouser* brouser;
 };
 
 #endif // MAINWINDOW_H
